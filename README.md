@@ -1,8 +1,8 @@
 # Dhaka-Finance-Navigator
-AI &amp; data science project exploring stock market analysis in Bangladesh’s financial market
-# Dhaka Finance Navigator (DFN)
+AI &amp; data science project exploring stock market of Bangladesh
 
-An AI-powered analysis tool for the Dhaka Stock Exchange
+[Content start here]
+
 
 🚀 Project Vision: Applied Economics in an Emerging Market
 
