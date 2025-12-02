@@ -10,7 +10,7 @@ This  project is dedicated to building and rigorously testing an advanced Artifi
 
 Time Series Forecasting: Utilizing Long Short-Term Memory (LSTM) deep learning networks on historical price and volume data.
 
-Sentiment Integration: Employing Natural Language Processing (NLP) to classify market sentiment from local Bengali financial news headlines.
+
 
 The core goal is to demonstrate how machine learning can provide data-driven insights and superior predictive performance compared to traditional econometric models (like ARIMA) within the context of an emerging financial market.
 
