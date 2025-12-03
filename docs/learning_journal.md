@@ -1,1 +1,1 @@
-
+- **Dec 3, 2025 (Day 2):** Set up professional folder structure and learned functions/error handling.
