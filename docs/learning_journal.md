@@ -1,1 +1,2 @@
 - **Dec 3, 2025 (Day 2):** Set up professional folder structure and learned functions/error handling.
+- **Dec 4, 2025 (Day 3):** Successfully merged 23+ yearly DSE CSV files, fixed header alignment (`header=None`), renamed columns, and converted the Date column to `datetime64` format. Data acquisition and structural cleaning are complete.
