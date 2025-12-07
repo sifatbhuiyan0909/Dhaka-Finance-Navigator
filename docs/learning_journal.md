@@ -2,3 +2,4 @@
 - **Dec 4, 2025 (Day 3):** Successfully merged 23+ yearly DSE CSV files, fixed header alignment (`header=None`), renamed columns, and converted the Date column to `datetime64` format. Data acquisition and structural cleaning are complete.
 - **Dec 5, 2025 (Day 4):** Finalized data structure by setting the Date column as the DataFrame index. Cleaned and converted all remaining price/volume columns (Open, Low, Volume) to the correct float64 data type.
 - **Dec 6, 2025 (Day 5):** handled missing data
+- **Dec 7, 2023 (Day 6):** find out the total mistakes from the million data entry
