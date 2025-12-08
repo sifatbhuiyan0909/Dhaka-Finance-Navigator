@@ -5,3 +5,4 @@
 - **Dec 7, 2025 (Day 6):** find out the total mistakes from the million data entry
 - **Dec 8, 2025 (Day 7):** Calculated Log Returns and Moving Averages (5-day & 20-day)
  and Cleaned up the resulting NaN values by dropping 19 rows where a 20-day average was impossible to calculate
+- **Dec 9, 2025 (Day 8):** today i used pandas_to library for the first time and learnt about many errors
