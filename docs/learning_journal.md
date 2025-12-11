@@ -7,3 +7,4 @@
  and Cleaned up the resulting NaN values by dropping 19 rows where a 20-day average was impossible to calculate
 - **Dec 9, 2025 (Day 8):** today i used pandas_to library for the first time and learnt about many errors
 - **Dec 10, 2025 (Day 9):** Defined the binary target variable (y) predicting next-day price movement (1=Up, 0=Down) using a groupby().shift(-1) operation. Separated features (X) from the target (y) and split the final dataset into training (80%) and testing (20%) sets using shuffle=False to preserve time-series integrity.
+- **Dec 10, 2025 (Day 9):** Initialized and trained a Random Forest Classifier on the Xtrain​ and ytrain​ sets. Established the baseline model performance, achieving 57.68% overall accuracy. The evaluation report highlighted a high recall but low precision on the 'Buy' signal (Class 1), indicating a need for hyperparameter tuning.
