@@ -1,0 +1,11 @@
+- **Dec 3, 2025 (Day 2):** Set up professional folder structure and learned functions/error handling.
+- **Dec 4, 2025 (Day 3):** Successfully merged 23+ yearly DSE CSV files, fixed header alignment (`header=None`), renamed columns, and converted the Date column to `datetime64` format. Data acquisition and structural cleaning are complete.
+- **Dec 5, 2025 (Day 4):** Finalized data structure by setting the Date column as the DataFrame index. Cleaned and converted all remaining price/volume columns (Open, Low, Volume) to the correct float64 data type.
+- **Dec 6, 2025 (Day 5):** handled missing data
+- **Dec 7, 2025 (Day 6):** find out the total mistakes from the million data entry
+- **Dec 8, 2025 (Day 7):** Calculated Log Returns and Moving Averages (5-day & 20-day)
+ and Cleaned up the resulting NaN values by dropping 19 rows where a 20-day average was impossible to calculate
+- **Dec 9, 2025 (Day 8):** today i used pandas_to library for the first time and learnt about many errors
+- **Dec 10, 2025 (Day 9):** Defined the binary target variable (y) predicting next-day price movement (1=Up, 0=Down) using a groupby().shift(-1) operation. Separated features (X) from the target (y) and split the final dataset into training (80%) and testing (20%) sets using shuffle=False to preserve time-series integrity.
+- **Dec 11, 2025 (Day 10):** Initialized and trained a Random Forest Classifier on the Xtrain​ and ytrain​ sets. Established the baseline model performance, achieving 57.68% overall accuracy. The evaluation report highlighted a high recall but low precision on the 'Buy' signal (Class 1), indicating a need for hyperparameter tuning.
+- **Dec 12, 2025 (Day 11):** Finalizing the optimization of the Random Forest model. This involves running automated search algorithms (like Grid Search or Random Search) to find the ideal settings for parameters such as the number of trees (n_estimators), the maximum depth of each tree (max_depth), and the minimum samples required to split a node (min_samples_split).
