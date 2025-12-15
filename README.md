@@ -1,101 +1,96 @@
-# Dhaka-Finance-Navigator
-AI &amp; data science project exploring stock market of Bangladesh
 
-[Content start here]
+📈 Dhaka Finance Navigator: Stock Prediction API
+Project Status
+Item	Status
+API Endpoint	Will be populated after successful Render deployment.
+Model	Random Forest Regressor
+Deployment	Render (Dockerized Web Service)
+Source Folder	APP_TEST (Local folder)
+📋 Overview
 
+The Dhaka Finance Navigator project provides a resilient and containerized RESTful API for predicting stock prices. The service is built with Flask and deployed via Docker on Render's Free Tier, ensuring high availability and cost-efficiency for basic use.
 
-🚀 Project Vision: Applied Economics in an Emerging Market
+This API serves a trained Random Forest Regressor model that processes engineered features (e.g., lagged prices, technical indicators) and returns a predicted stock price, allowing for seamless integration into dashboards, mobile applications, or trading tools.
+🌟 Key Features
 
-This  project is dedicated to building and rigorously testing an advanced Artificial Intelligence system for analyzing stock movements on the Dhaka Stock Exchange (DSE). The Dhaka Finance Navigator (DFN) system integrates two primary forecasting methodologies:
+    RESTful API: Predicts stock prices via the standardized /predict endpoint, accepting JSON input and returning JSON output.
 
-Time Series Forecasting: Utilizing Long Short-Term Memory (LSTM) deep learning networks on historical price and volume data.
+    Containerized Deployment: Uses a Dockerfile for environment consistency and quick deployment on any Docker-compatible platform (currently Render).
 
+    Machine Learning: Utilizes a Random Forest Regressor model, saved as random_forest_model.pkl.
 
+    Data Consistency: Feature names and processing are managed by the saved model_features.pkl file.
 
-The core goal is to demonstrate how machine learning can provide data-driven insights and superior predictive performance compared to traditional econometric models (like ARIMA) within the context of an emerging financial market.
+🛠️ Technology Stack
+Component	Technology	Purpose
+Web Framework	Flask	Lightweight Python server for API routing.
+Production Server	gunicorn	WSGI HTTP server used within the Docker container.
+Machine Learning	scikit-learn (Random Forest)	Core prediction logic.
+Data Handling	pandas, numpy	Data manipulation and feature preparation.
+Deployment	Docker, Render	Containerization and free hosting platform.
+🚀 Setup and Deployment
+1. Local Setup
 
-📊 Current Status: Foundation & Data Acquisition
+To run and test the API locally, you need Python 3.x and the required dependencies.
+Bash
 
-Metric
+# Clone the repository
+git clone https://github.com/sifatbhuiyan0909/Dhaka-Finance-Navigator.git
+cd Dhaka-Finance-Navigator
 
-Detail
+# Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
-Date Started
+# Install dependencies
+pip install -r requirements.txt
 
-December 2, 2025
+# Run the application using the development server
+python app.py
 
-Current Phase
+(The API will run locally at: http://127.0.0.1:5000/)
+2. Deployment on Render (Via Docker)
 
-Foundation & Data Acquisition (Month 1 Starting)
+This project is configured for automated deployment on Render directly from this GitHub repository.
 
-Next Milestone
+The configuration relies on the following files in the repository root:
 
-First working ARIMA Econometric Model (Target: End of Month 2)
+    Dockerfile (Specifies the environment and runs gunicorn app:app).
 
-Current Goal
+    requirements.txt (Includes gunicorn and ML libraries).
 
-Establish Python environment and acquire initial DSE historical data.
+The service runs the Flask application (app.py) on port 8080. Render automatically detects the Dockerfile, builds the container, and serves the application.
+💡 API Usage
 
-🛠️ Technical Stack & Environment
+The main endpoint for making predictions is /predict.
+Method	URL	Description
+POST	/predict	Returns the predicted stock price based on input features.
+Example Request
 
-The DFN project is developed entirely using zero-cost, open-source tools:
+The API expects a JSON payload containing the exact features the model was trained on.
+Bash
 
-Language: Python 3.x
+curl -X POST \
+  https://YOUR-RENDER-URL.onrender.com/predict \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "lag_1": 150.25,
+    "volume_ma_5": 8500000,
+    "rsi_14": 55.3,
+    "macd": 0.5
+  }'
 
-Environment: Google Colab (for development and training)
+Example Response (Success)
+JSON
 
-Core Data Libraries: Pandas (DataFrames), NumPy (Numerical arrays)
+{
+  "prediction": 150.98,
+  "status": "success"
+}
 
-Modeling Libraries: Planned: Statsmodels (ARIMA), TensorFlow/Keras (LSTM)
+🤝 Contributing
 
-Visualization: Planned: Matplotlib, Seaborn
+We welcome contributions! Please open an issue or submit a pull request if you have suggestions for new features, better model performance, or bug fixes.
 
-NLP/Sentiment: Planned: NLTK / spaCy (for Bengali text processing)
-
-📈 Learning & Progress Log
-
-This log documents weekly progress, technical challenges, and major milestones achieved.
-
-Week
-
-Date Range
-
-Work Completed / Deliverables
-
-Wk 1
-
-Dec 1 - Dec 7, 2025
-
-Goal: Establish Python environment, set up GitHub/Colab, and master Python basics (variables, functions, control flow).
-
-Wk 2
-
-Dec 8 - Dec 14, 2025
-
-Goal: Find reliable DSE data sources, successfully import 5 years of historical data, and master basic NumPy array operations.
-
-Wk 3
-
-Dec 15 - Dec 21, 2025
-
-Goal: Master Pandas for CSV import, indexing, data cleaning (handling nulls), and initial data type correction.
-
-Wk 4
-
-Dec 22 - Dec 28, 2025
-
-Goal: Calculate necessary features (like Daily Return) and finalize the clean dataset (clean_dse_data.csv).
-
-...
-
-(Future weeks will document the implementation of ARIMA, LSTM, NLP, and final report generation.)
-
-
-
-🎓 About This Project
-
-As a high school student from Bangladesh with experience running a small business, I am building this project to explore how  computational techniques can provide data-driven insights for financial decision-making in local markets. This is both a comprehensive technical learning journey and a practical application of machine learning to real-world economic analysis, aiming to bridge the gap between financial theory and technology.
-
-⚠️ Important Disclaimer
-
-This is an educational research project created exclusively for learning and demonstration purposes. The predictions and analysis provided by this tool are based on theoretical models and should NOT be used for actual investment decisions. Always consult with qualified financial advisors before making investment choices.
+Disclaimer: This stock prediction model is for educational and experimental purposes only. It is not financial advice. Trading involves risk. 
+** well i am just beginning and it was created after so many errors and trails and i expect that there are mistakes i missed. so open to be helped **
