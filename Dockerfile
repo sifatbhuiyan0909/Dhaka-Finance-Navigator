@@ -1,5 +1,5 @@
 # 1. BASE IMAGE: Start with a reliable, lightweight Python environment
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 # 2. WORKING DIRECTORY: Set the default folder inside the container
 WORKDIR /app
@@ -17,4 +17,4 @@ EXPOSE 8080
 
 # 6. RUN COMMAND: Execute the production server (Gunicorn) when the container starts
 # Gunicorn binds to port 8080 and runs your app object ('app') from main.py
-CMD exec gunicorn --bind :8080 --workers 2 --threads 4 main:app
+CMD exec gunicorn --bind :8080 --workers 2 --threads 4 app:app
