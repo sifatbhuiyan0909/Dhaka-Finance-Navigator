@@ -1,5 +1,5 @@
 # 1. BASE IMAGE: Start with a reliable, lightweight Python environment
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # 2. WORKING DIRECTORY: Set the default folder inside the container
 WORKDIR /app
