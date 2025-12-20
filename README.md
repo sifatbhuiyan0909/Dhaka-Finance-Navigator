@@ -1,3 +1,4 @@
+# this is a failed project which i can't understand as when i try to deploy it using render, it gives me error on pandas_ta. anyone?
 # DHAKA FINANCE NAVIGATOR
 📈 Dhaka Finance Navigator: Stock Prediction API
 Project Status
